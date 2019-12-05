@@ -15,7 +15,7 @@ interface QrPaymentInterface
      *
      * @return $this
      */
-    public function setOptions(array $options): self;
+    public function setOptions(array $options);
 
     /**
      * Sets the currency used for the transaction. Use three-letter currency code.
@@ -24,21 +24,21 @@ interface QrPaymentInterface
      *
      * @return $this
      */
-    public function setCurrency(string $currency): self;
+    public function setCurrency(string $currency);
 
     /**
      * @param DateTimeInterface $dueDate
      *
      * @return $this
      */
-    public function setDueDate(DateTimeInterface $dueDate): self;
+    public function setDueDate(DateTimeInterface $dueDate);
 
     /**
      * @param float $amount
      *
      * @return $this
      */
-    public function setAmount(float $amount): self;
+    public function setAmount(float $amount);
 
     /**
      * Returns the generated string that can be put into QR code image
