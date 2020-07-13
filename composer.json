@@ -25,6 +25,7 @@
     "friendsofphp/php-cs-fixer": "^2.16"
   },
   "require": {
-    "rikudou/iban": "^1.0"
+    "rikudou/iban": "^1.0",
+    "php": "^7.0"
   }
 }
