@@ -6,7 +6,7 @@
     "qr",
     "payment"
   ],
-  "license": "WTFPL",
+  "license": "MIT",
   "authors": [
     {
       "name": "Dominik Chrástecký",
