@@ -1,0 +1,25 @@
+name: Tests
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
+jobs:
+  code_style:
+    name: Test code style
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ['7.1', '7.2', '7.3', '7.4', '8.0']
+    steps:
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.version }}
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: composer install
+      - name: Test code style
+        run: composer fixer -- --dry-run
